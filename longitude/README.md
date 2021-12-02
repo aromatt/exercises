@@ -1,8 +1,8 @@
 # Overview
 
-The script `longitude.py` takes in lines of longitude as input, and outputs the number of cities
+The script `longitude.py` takes in longitude lines as input, and prints the number of cities
 intersected by each input longitude line. The program uses a database (loaded from CSV) containing
-city longitude ranges.
+the longitude ranges covered by cities around the world.
 
 ## Problem
 
@@ -30,7 +30,11 @@ Suppose `cities.csv` contains just two cities:
     Atlanta,-84.42,-84.27
 
 Then, given the input longitude `72.9`, the script would report that exactly one city is
-intersected (Mumbai).
+intersected by `72.9` (Mumbai):
+
+    $ echo '72.9' | ./longitude.py cities.csv
+    lng,num_cities
+    72.9,1
 
 ## Files
 
@@ -38,24 +42,3 @@ intersected (Mumbai).
     ├── longitude.py   # main program
     ├── cities.csv     # cities database
     └── gen_input.py   # input generator
-
-## Formats
-
-### `cities.csv`
-
-    city,lng_min,lng_max
-    Atlanta,-84.42,-84.27
-    ...
-
-### `input.csv`
-
-    161.8
-    -102.71
-    ...
-
-### Output of `longitude.py`:
-
-    lng,num_cities
-    161.8,0
-    -102.71,11
-    ...
