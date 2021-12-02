@@ -14,10 +14,8 @@ task, and please ask questions to clarify requirements as needed.
 
 # Instructions
 
-1. Run `./gen_input.py cities.csv 1000000 > input.csv`.
-2. Run `./longitude.py cities.csv input.csv`.
-
-Note: you can also provide input via STDIN: `cat input.csv | ./longitude.py cities.csv`.
+1. Run `./random_longitude.py cities.csv 1000000 > input.csv`.
+2. Run `cat input.csv | ./longitude.py cities.csv`.
 
 # Details
 
@@ -39,6 +37,6 @@ intersected by `72.9` (Mumbai):
 ## Files
 
     .
-    ├── longitude.py   # main program
-    ├── cities.csv     # cities database
-    └── gen_input.py   # input generator
+    ├── longitude.py          # main program
+    ├── cities.csv            # cities database
+    └── random_longitude.py   # input generator

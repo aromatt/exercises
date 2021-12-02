@@ -4,7 +4,7 @@ import random
 import sys
 import os
 
-def gen_input(city_data, count):
+def generate(city_data, count):
     random.seed(os.environ.get('SEED', '0'))
     print('Generating {} rows of input data'.format(count), file=sys.stderr)
     for i in range(count):
@@ -28,10 +28,10 @@ def load_city_data(path):
     return sorted(data)
 
 if len(sys.argv) != 3:
-    print('USAGE: ./gen_input.py CITY_DATA COUNT')
+    print('USAGE: ./random_longitude.py CITY_DATA COUNT')
     sys.exit(1)
 
 city_data_path = sys.argv[1]
 count = int(sys.argv[2])
 city_data = load_city_data(city_data_path)
-gen_input(city_data, count)
+generate(city_data, count)

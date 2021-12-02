@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import fileinput
 import sys
 
 def load_city_data(path):
@@ -29,8 +28,9 @@ def find_intersections(city_data, longitudes):
 
 args = sys.argv[1:]
 if len(args) < 1:
-    print('USAGE: ./longitude.py CITIES_PATH [INPUT_PATH]')
+    print('\nUSAGE: ./longitude.py CITIES_PATH')
+    print('\nProvide input longitudes via STDIN.')
     sys.exit(1)
 
 city_data = load_city_data(args.pop(0))
-find_intersections(city_data, fileinput.input(files=args))
+find_intersections(city_data, sys.stdin)
