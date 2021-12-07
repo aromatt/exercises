@@ -6,7 +6,7 @@ def load_city_data(path):
     """Load city longitude ranges from CSV file at the provided path.
     Return a sorted list of tuples where each tuple is (lng_min, lng_max, city)."""
     data = []
-    with open(path, 'r') as f:
+    with open(path, 'r', encoding='utf-8') as f:
         next(f) # skip header
         for line in f:
             city, lng_min, lng_max = line.split(',')

@@ -19,7 +19,7 @@ def generate(city_data, count):
 
 def load_city_data(path):
     data = []
-    with open(path, 'r') as f:
+    with open(path, 'r', encoding='utf-8') as f:
         next(f) # skip header
         for line in f:
             city, lng_min, lng_max = line.split(',')
