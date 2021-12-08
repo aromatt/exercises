@@ -12,7 +12,7 @@ def load_city_data(path):
             city, lng_min, lng_max = line.split(',')
             lng_min, lng_max = float(lng_min), float(lng_max)
             data.append((lng_min, lng_max, city))
-    return sorted(data)
+    return data
 
 def find_intersections(city_data, longitudes):
     """Look up each input longitude against `city_data` and print the number of
