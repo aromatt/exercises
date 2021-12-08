@@ -6,7 +6,7 @@ the longitude ranges covered by cities around the world.
 
 ## Problem
 
-Your task is to process 1 million input longitudes.
+Your task is to process 4 million input longitudes.
 
 The current implementation of `longitude.py` is very inefficient. Out of the box, it likely won't
 finish before the end of the exercise. Feel free to use anything in your toolset to complete the
@@ -14,7 +14,7 @@ task, and please ask questions to clarify requirements as needed.
 
 # Instructions
 
-1. Run `./random_longitude.py cities.csv 1000000 > input.csv`.
+1. Run `./random_longitude.py cities.csv 4000000 > input.csv`.
 2. Run `cat input.csv | ./longitude.py cities.csv`.
 
 # Details
